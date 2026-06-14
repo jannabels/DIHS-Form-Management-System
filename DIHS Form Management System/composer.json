@@ -1,0 +1,18 @@
+{
+    "name": "hans/systemngdihs",
+    "description": "School Form 1 System",
+    "license": "MIT",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Deped",
+            "email": "deped@gmail.com"
+        }
+    ],
+    "require": {
+        "phpoffice/phpspreadsheet": "1.29.0",
+        "dompdf/dompdf": "^3.1",
+        "phpmailer/phpmailer": "^6.10"
+    }
+    
+}

@@ -1,0 +1,127 @@
+:root {
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+  --card: #ffffff;
+  --card-foreground: #1a1a1a;
+  --primary: #4CAF50;
+  --primary-foreground: #ffffff;
+  --muted: #718096;
+  --border: #cbd5e0;
+  --radius: 0.5rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+  position: relative;
+  background-color: var(--card);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 28rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.logo img {
+  width: 220px;
+  height: auto;
+}
+
+form,
+h2 {
+  position: relative;
+  z-index: 1;
+}
+
+h2 {
+  margin: 0 0 1.5rem;
+  font-size: 1.8rem;
+  color: var(--foreground);
+  font-weight: 700;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--muted);
+  text-align: left;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1.5px solid var(--primary);
+  border-radius: var(--radius);
+  margin-bottom: 1.2rem;
+  font-size: 1.1rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: #388E3C;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.3);
+}
+
+.forgot-link {
+  display: block;
+  text-align: right;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: var(--primary);
+  transition: color 0.3s;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+  color: #388E3C;
+}
+
+.submit-button {
+  width: 100%;
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  padding: 0.75rem;
+  border: none;
+  border-radius: 1.2rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
