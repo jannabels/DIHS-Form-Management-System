@@ -1,18 +1,19 @@
 {
+  "version": 2,
   "builds": [
     {
-      "src": "DIHS Form Management System/**/*.php",
+      "src": "**/*.php",
       "use": "@vercel/php"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "^/$",
-      "dest": "/DIHS Form Management System/index.php"
+      "source": "/",
+      "destination": "/index.php"
     },
     {
-      "src": "^/(.*)$",
-      "dest": "/DIHS Form Management System/$1"
+      "source": "/(.*)",
+      "destination": "/DIHS Form Management System/$1"
     }
   ]
 }
