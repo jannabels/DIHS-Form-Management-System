@@ -311,7 +311,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="success-message"><?php echo htmlspecialchars($success_message); ?></div>
         <?php endif; ?>
         
-        <form method="POST" action="" class="login-form">
+        <div class="message-container"></div>
+        <form id="loginForm" method="POST" action="" class="login-form">
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" class="form-control" required 
@@ -332,7 +333,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </a>
             </div>
             
-            <button type="submit" class="btn">Log In</button>
+            <button id="loginBtn" type="submit" class="btn">Log In</button>
         </form>
     </div>
 
@@ -387,7 +388,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 }
             });
         }, 5000);
-        ye
         // Focus management
         document.addEventListener('DOMContentLoaded', function() {
             const usernameInput = document.getElementById('username');
