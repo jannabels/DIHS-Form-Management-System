@@ -8,9 +8,7 @@ FROM composer:2.8 AS composer-deps
 WORKDIR /build
 
 # Copy only the manifest files first for better layer caching
-COPY ["DIHS Form Management System/composer.json", \
-      "DIHS Form Management System/composer.lock", \
-      "./"]
+COPY ["DIHS Form Management System/composer.json", "DIHS Form Management System/composer.lock", "./"]
 
 # Install PHP production dependencies (no dev, no scripts)
 RUN composer install \
