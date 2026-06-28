@@ -1,3 +1,18 @@
 {
-  "outputDirectory": "DIHS Form Management System"
+  "builds": [
+    {
+      "src": "DIHS Form Management System/**/*.php",
+      "use": "@vercel/php"
+    }
+  ],
+  "routes": [
+    {
+      "src": "^/$",
+      "dest": "/DIHS Form Management System/index.php"
+    },
+    {
+      "src": "^/(.*)$",
+      "dest": "/DIHS Form Management System/$1"
+    }
+  ]
 }
