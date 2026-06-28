@@ -1,0 +1,36 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Node modules (installed inside the container)
+**/node_modules
+
+# Composer vendor (rebuilt in the multi-stage build)
+# Keep vendor/ so the COPY step works; composer-deps stage overwrites it
+# with a clean --no-dev install.
+
+# Test / coverage artifacts
+**/coverage
+**/.nyc_output
+**/jest.config.*
+**/*.test.js
+**/*.spec.js
+
+# Editor / OS artifacts
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea
+.vscode
+
+# Vercel config (not needed at runtime)
+vercel.json
+
+# Backup files
+**/*.bak
+**/*.backup
+
+# SQL scripts (schema files — not needed at runtime)
+**/*.sql
