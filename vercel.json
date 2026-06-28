@@ -1,19 +1,14 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "**/*.php",
-      "use": "@vercel/php"
-    }
-  ],
   "rewrites": [
+    { "source": "/", "destination": "/login/index.php" },
+    { "source": "/(.*)", "destination": "/$1" }
+  ],
+  "headers": [
     {
-      "source": "/",
-      "destination": "/index.php"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/DIHS Form Management System/$1"
+      "source": "/(.*).php",
+      "headers": [
+        { "key": "Content-Type", "value": "text/html; charset=utf-8" }
+      ]
     }
   ]
 }
